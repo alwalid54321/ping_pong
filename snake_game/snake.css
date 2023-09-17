@@ -1,0 +1,292 @@
+@font-face {
+    font-family: "game";
+    src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap");
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  button:focus {
+    outline: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #e74c3c;
+  }
+  
+  body {
+    background-color: #00aaff9d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#e74c3c;
+  }
+  
+  canvas {
+    background-color: #ffcc0260;
+    width: 500px;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #ui {
+    display: inline-flex;
+    width: 100%;
+    font-size: 10px;
+    margin: 5px auto;
+    letter-spacing: 4px;
+
+  }
+  
+  h2 {
+    font-weight: 900;
+    font-size: 25px;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+    margin: 25px auto;
+
+  }
+  
+  #score {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 10px auto;
+float: left;
+  }
+  
+  .noselect {
+    user-select: none;
+  }
+  
+  #replay {
+    display: flex;
+    width: auto;
+    font-size: 10px;
+    padding: 10px 20px;
+    background: #00a8ff;
+    border: none;
+    color: #f1c40f;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    align-items: center;  
+}
+  
+  #replay:hover {
+    color: #00a8ff;
+    background: #f1c40f;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  #replay svg {
+    margin-right: 8px;
+    
+  }
+  
+  @media (max-width: 600px) {
+    #replay {
+      margin-bottom: 20px;
+    }
+  
+    #replay,
+    h2 {
+      transform: rotate(0deg);
+    }
+  
+    #ui {
+      flex-flow: row wrap;
+      margin-bottom: 20px;
+    }
+  
+    #score {
+      margin-top: 0;
+      margin-left: 20px;
+    }
+  
+    .container {
+      flex-flow: column wrap;
+    }
+  }
+  
+  #author {
+    width: 100%;
+    bottom: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: inherit;
+    text-transform: uppercase;
+    padding-left: 35px;
+  }
+  
+  #author span {
+    font-size: 20px;
+    margin-left: 20px;
+ 
+    letter-spacing: 4px;
+  }
+  #author span a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 30px;
+    color: #f1c40f;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  #author span a:hover {
+    color: #00a8ff;
+    text-decoration: none;
+    font-size: 30px;
+    background-color: #f1c40f;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  
+  #author h1 {
+    font-size: 50px; 
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  /* For screens with a width of 600px or less (adjust breakpoint as needed) */
+
+    #controls {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      transform: none;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding-right: auto;
+      color: #f1c40f;
+    }
+  
+    #controls-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    #controls-left,
+    #controls-right {
+      display: flex;
+      color: #f1c40f;
+    }
+  
+    .control-button {
+      color: #f1c40f;
+      width: 100px;
+      height: 100px;
+      background-color: #3498db; /* Background color of the buttons */
+      border: 2px solid #2980b9; /* Border color of the buttons */
+      border-radius: 50%; /* Rounded edges to make them look like circles */
+      font-size: 24px; /* Adjust font size as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+  
+ /* For screens with a width of 600px or less (adjust breakpoint as needed) */
+@media (max-width: 600px) {
+    #controls {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      transform: none;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding-right: auto;
+      color: #f1c40f;
+    }
+  
+    #controls-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    #controls-left,
+    #controls-right {
+      display: flex;
+      color: #f1c40f;
+    }
+  
+    .control-button {
+      color: #f1c40f;
+      width: 100px;
+      height: 100px;
+      background-color: #3498db; /* Background color of the buttons */
+      border: 2px solid #2980b9; /* Border color of the buttons */
+      border-radius: 50%; /* Rounded edges to make them look like circles */
+      font-size: 24px; /* Adjust font size as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  
+  button {
+    width: 50px;
+    height: 50px;
+    background: #00a8ff;
+    border: none;
+    color: #f1c40f;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background: #f1c40f;
+    color: #00a8ff;
+  }
+  
+  #pause {
+    width: 100px;
+    background: #886e04; 
+  }
+  
+  #pause:hover {
+    background: #00a8ff;
+    color: #f1c40f;
+  }
